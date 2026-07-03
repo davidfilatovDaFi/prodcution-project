@@ -1,6 +1,6 @@
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import { routes } from "../config/routerConfig";
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { routes } from '../config/routerConfig';
 
 const AppRounter = () => {
   console.log(routes);

@@ -1,9 +1,9 @@
-import { FC } from "react";
-import { Link, LinkProps } from "react-router-dom";
-import { classNames } from "shared/lib/classNames/classNames";
-import cls from "./AppLink.module.scss";
+import { FC } from 'react';
+import { Link, LinkProps } from 'react-router-dom';
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './AppLink.module.scss';
 
-type Theme = "primary" | "inverted";
+type Theme = 'primary' | 'inverted';
 
 interface AppLinkProps extends LinkProps {
   className?: string;
@@ -13,15 +13,13 @@ interface AppLinkProps extends LinkProps {
 export const AppLink: FC<AppLinkProps> = ({
   className,
   children,
-  theme = "primary",
+  theme = 'primary',
   ...props
-}) => {
-  return (
-    <Link
-      className={classNames(cls.AppLink, {}, [className, cls[theme]])}
-      {...props}
-    >
-      {children}
-    </Link>
-  );
-};
+}) => (
+  <Link
+    className={classNames(cls.AppLink, {}, [className, cls[theme]])}
+    {...props}
+  >
+    {children}
+  </Link>
+);

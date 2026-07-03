@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext"
+import { useContext } from 'react';
+import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './ThemeContext';
 
 interface UseThemeResult {
   theme: Theme,
@@ -11,14 +11,13 @@ export const useTheme = (): UseThemeResult => {
 
   if (context === null) throw new Error('Cant find context');
 
-  const {theme, setTheme} = context
+  const { theme, setTheme } = context;
 
   const toggleTheme = () => {
-    const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK
+    const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
     setTheme(newTheme);
-    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
+    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
   };
 
-  return {theme, toggleTheme}
-
-}
+  return { theme, toggleTheme };
+};
