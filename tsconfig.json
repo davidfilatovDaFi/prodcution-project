@@ -9,7 +9,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
