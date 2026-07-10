@@ -11,13 +11,15 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback="">
+      <Suspense fallback=''>
         <header>
           <Navbar />
         </header>
-        <div className="content-page">
+        <div className='content-page'>
           <Sidebar />
-          <AppRounter />
+          <div className='page-wrapper'>
+            <AppRounter />
+          </div>
         </div>
       </Suspense>
     </div>

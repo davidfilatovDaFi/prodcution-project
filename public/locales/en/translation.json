@@ -1,4 +1,7 @@
 {
-  "Основная страница": "MainPage",
-  "Перевести": "Translate"
+  "page.about": "AboutPage",
+  "page.main": "MainPage",
+  "translate": "Translate",
+  "open": "Open",
+  "page-nf": "Page is not found"
 }

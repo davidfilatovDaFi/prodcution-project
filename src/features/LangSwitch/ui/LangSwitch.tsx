@@ -15,7 +15,7 @@ export function LangSwitch({ className }: LangSwitchProps) {
 
   return (
     <Button onClick={toggleLang} className={classNames('', {}, [className])}>
-      {t('Перевести')}
+      {t('translate')}
     </Button>
   );
 }
