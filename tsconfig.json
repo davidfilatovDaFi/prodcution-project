@@ -9,7 +9,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node", "jest"],
+    "types": ["node", "jest", "@testing-library/react"],
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
@@ -20,5 +20,5 @@
       "module": "commonjs"
     }
   },
-  "include": ["src", "webpack.config.ts"]
-}
+  "include": ["src", "webpack.config.ts", "config"]
+} 

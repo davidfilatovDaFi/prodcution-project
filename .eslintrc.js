@@ -32,7 +32,20 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-props-no-spreading': 'warn',
-    'import/no-extraneous-dependencies': 'warn',
+    'import/no-extraneous-dependencies': [
+      'warn',
+      {
+        devDependencies: [
+          '**/*.test.ts',
+          '**/*.test.tsx',
+          '**/*.spec.ts',
+          '**/*.spec.tsx',
+          '**/setupTests.ts',
+          '**/setup.ts',
+          '**/vitest.setup.ts',
+        ],
+      },
+    ],
     'no-unused-vars': 'warn',
     'no-shadow': 'off',
     'no-underscore-dangle': 'off',
@@ -54,8 +67,18 @@ module.exports = {
     }],
     'max-len': ['error', { ignoreComments: true, code: 100 }],
     'jsx-quotes': ['error', 'prefer-single'],
+    'implicit-arrow-linebreak': 'off',
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}', '**/src/**/test/**/*.{ts,tsx}', 'config/**'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+  ],
 };
